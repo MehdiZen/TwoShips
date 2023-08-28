@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,11 @@
   },
   "homepage": "https://github.com/razh/js13k-2021#readme",
   "devDependencies": {
+    "@babel/core": "^7.22.11",
+    "@babel/plugin-transform-modules-commonjs": "^7.22.11",
+    "@babel/preset-env": "^7.22.10",
+    "@types/jest": "^29.5.4",
+    "babel-jest": "^29.6.4",
     "del": "6.0.0",
     "escape-string-regexp": "5.0.0",
     "eslint": "7.32.0",
