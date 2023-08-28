@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js13k-2021</title>
+
+    <style>
+      body {
+        margin: 0;
+        background: #000;
+        color: #fff;
+        overflow: hidden;
+        font-family: Avenir Next, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      @keyframes f {
+        100% {
+          opacity: 0;
+        }
+      }
+
+      h1,
+      .h,
+      .e {
+        position: absolute;
+        font-size: clamp(100%, 2rem + 3.2vw, 5rem);
+      }
+
+      h1 {
+        margin: 0;
+        bottom: 3rem;
+        left: 3rem;
+        font-weight: 400;
+        animation: f 2s 2s forwards;
+      }
+
+      /* Reticle */
+      .r,
+      /* Endscreen */
+      .e {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .r {
+        opacity: 50%;
+        mix-blend-mode: difference;
+      }
+
+      /* Health */
+      .h,
+      /* Score */
+      .s {
+        position: absolute;
+        font-weight: 100;
+        right: 3rem;
+      }
+
+      .h {
+        bottom: 3rem;
+      }
+
+      .s {
+        top: 3rem;
+        font-size: 2rem;
+      }
+
+      .h:empty,
+      .s:empty {
+        display: none;
+      }
+
+      .e {
+        font-weight: 100;
+        text-align: center;
+      }
+
+      /* New game */
+      .n {
+        background: none;
+        border: 0;
+        color: inherit;
+        font-size: 2rem;
+        font-family: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <h1>Two<br>Spaceships<br>Passing<br>In The<br>Night</h1>
+    <div class="r">&#11041;</div>
+    <div class="h"></div>
+    <div class="s"></div>
+    <div class="e" hidden>
+      <div>Game over</div><button class="n" onclick="location.reload()">Restart</button>
+    </div>
+    <script type="module" src="./src/index.js"></script>
+  </body>
+</html>
