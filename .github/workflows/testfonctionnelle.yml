@@ -32,12 +32,12 @@ jobs:
     - name: Start Local Server
       run: |
         npm install -g live-server
-        live-server --port=5500 --watch="../../index.html" &
+        live-server --port=5500 --watch="./index.html" &
         sleep 5
     # - name: Wait for Local Server
     #   run: wait-on http://127.0.0.1:5500/TwoShips/index.html
     - name: Debug - List Files in Directory
-      run: ls -R ./
+      run: ls ./
 
     - name: Run Nightwatch tests 
       run: xvfb-run --auto-servernum npm run nightwatch -- --env chrome
