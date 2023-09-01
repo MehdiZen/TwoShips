@@ -34,9 +34,22 @@ jobs:
 
     - name: Install wait-on
       run: npm install -g wait-on
-      
-    - name: Install Chrome and Chromedriver
-      uses: nanopx/chromedriver@v2
+
+    - name: Install Chrome
+      run: |
+        wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+        sudo dpkg -i google-chrome-stable_current_amd64.deb
+        sudo apt-get -f install
+      if: runner.os == 'Linux'
+
+    - name: Install Chromedriver
+      run: |
+        LATEST=$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
+        wget https://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip
+        unzip chromedriver_linux64.zip
+        chmod +x chromedriver
+        sudo mv chromedriver /usr/local/bin/
+      if: runner.os == 'Linux'
 
     - name: Start Live Server
       run: live-server --port=5500 --watch="../../index.html" &
