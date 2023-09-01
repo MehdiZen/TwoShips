@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="1">
+
+  <testsuite name="nightwatch.examples.twoshipstest.canimove"
+    errors="1" failures="0" hostname="" id="" package="twoshipstest" skipped="0"
+    tests="1" time="10.76" timestamp="">
+  
+    <testcase name="Can i shoot" classname="nightwatch.examples.twoshipstest.canimove" time="5.379" assertions="0">
+    <error message="An error occurred while running .click() command on &lt;body&gt;: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=116.0.5845.110)" type="error"><![CDATA[
+    Error
+    at DescribeInstance.&lt;anonymous&gt; (/home/mehdi/Delivery/ubisoft/TwoShips/nightwatch/examples/twoshipstest/canimove.js:4:8)
+    ]]></error>
+    
+    </testcase>
+  
+
+  
+    <system-err>
+       TimeoutError
+   An error occurred while running .click() command on &lt;body&gt;: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=116.0.5845.110)
+    {&#34;error&#34;:{&#34;name&#34;:&#34;NoSuchWindowError&#34;,&#34;remoteStacktrace&#34;:&#34;&#34;},&#34;status&#34;:-1,&#34;value&#34;:null}
+
+    Error location:
+    /home/mehdi/Delivery/ubisoft/TwoShips/nightwatch/examples/twoshipstest/canimove.js:
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     2 |     it(&#39;Can i shoot&#39;, function(client) {
+     3 |       client
+     4 |       .click(&#34;body&#34;) 
+     5 | //         client.keys(&#34;z&#34;, function(done) {
+     6 | //     client.pause(5000);
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+    </system-err>
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>

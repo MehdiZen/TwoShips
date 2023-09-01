@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="with-custom-commands.angularTodo"
+    errors="0" failures="0" hostname="" id="" package="with-custom-commands" skipped="0"
+    tests="1" time="7.452" timestamp="">
+  
+    <testcase name="should add a todo using custom commands" classname="with-custom-commands.angularTodo" time="3.722" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+
+  
+    <system-err>
+       TimeoutError
+   An error occurred while running .click() command on &lt;body&gt;: element not interactable: element has zero size
+  (Session info: chrome=116.0.5845.110)
+    {&#34;error&#34;:{&#34;name&#34;:&#34;ElementNotInteractableError&#34;,&#34;remoteStacktrace&#34;:&#34;&#34;},&#34;status&#34;:-1,&#34;value&#34;:null}
+
+    Error location:
+    /home/mehdi/Delivery/ubisoft/TwoShips/nightwatch/examples/twoshipstest/canimove.js:
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     2 |     it(&#39;Can i shoot&#39;, function(client) {
+     3 |       client
+     4 |       .click(&#34;body&#34;) 
+     5 | //         client.keys(&#34;z&#34;, function(done) {
+     6 | //     client.pause(5000);
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+ NoSuchElementError
+   An element could not be located on the page using the given search parameters.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+
+    Error location:
+    /home/mehdi/Delivery/ubisoft/TwoShips/nightwatch/examples/with-page-objects/google.js:
+    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     17 | 
+     18 |   it(&#39;should find nightwatch.js in results&#39;, function(browser) {
+     19 |     homePage.setValue(&#39;@searchBar&#39;, &#39;Nightwatch.js&#39;); 
+     20 |     homePage.submit();
+     21 | 
+    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+    </system-err>
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>

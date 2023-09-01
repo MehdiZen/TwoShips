@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="0">
+
+  <testsuite name="twoshipstest.canimove"
+    errors="1" failures="0" hostname="" id="" package="twoshipstest" skipped="3"
+    tests="0" time="0.000" timestamp="">
+  
+
+  
+    <system-err>
+       An error occurred while creating a new ChromeDriver session: [Error] Unable to obtain browser driver.
+        For more information on how to install drivers see
+        https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/. Error: Error executing command for /home/mehdi/Delivery/ubisoft/TwoShips/node_modules/selenium-webdriver/bin/linux/selenium-manager with --browser,chrome,--output,json: error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: failed to lookup address information: Try again
+  Verify if ChromeDriver is configured correctly; using:
+  {
+     start_process: true,
+     server_path: &#39;&#39;,
+     port: 9515,
+     host: &#39;localhost&#39;,
+     ssl: false,
+     default_path_prefix: &#39;&#39;,
+     proxy: undefined,
+     cli_args: {}
+  }
+
+ 
+  More info might be available in the log file: /home/mehdi/Delivery/ubisoft/TwoShips/logs/twoshipstest/canimove_chromedriver.log
+    </system-err>
+  
+
+    
+    <error message="An error occurred while creating a new ChromeDriver session: [Error] Unable to obtain browser driver.
+        For more information on how to install drivers see
+        https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/. Error: Error executing command for /home/mehdi/Delivery/ubisoft/TwoShips/node_modules/selenium-webdriver/bin/linux/selenium-manager with --browser,chrome,--output,json: error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: failed to lookup address information: Try again"><![CDATA[
+      Error: An error occurred while creating a new ChromeDriver session: [Error] Unable to obtain browser driver.
+        For more information on how to install drivers see
+        https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/. Error: Error executing command for /home/mehdi/Delivery/ubisoft/TwoShips/node_modules/selenium-webdriver/bin/linux/selenium-manager with --browser,chrome,--output,json: error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: failed to lookup address information: Try again
+    at getPath (/home/mehdi/Delivery/ubisoft/TwoShips/node_modules/selenium-webdriver/common/driverFinder.js:35:11)
+    at thenableWebDriverProxy.createSession (/home/mehdi/Delivery/ubisoft/TwoShips/node_modules/selenium-webdriver/chromium.js:692:43)
+    at thenableWebDriverProxy.createSession (/home/mehdi/Delivery/ubisoft/TwoShips/node_modules/selenium-webdriver/chrome.js:224:13)
+    at createDriver (/home/mehdi/Delivery/ubisoft/TwoShips/node_modules/selenium-webdriver/index.js:152:33)
+    at Builder.build (/home/mehdi/Delivery/ubisoft/TwoShips/node_modules/selenium-webdriver/index.js:680:16)
+    at ChromeDriver.createDriver (/home/mehdi/Delivery/ubisoft/TwoShips/node_modules/nightwatch/dist/transport/selenium-webdriver/index.js:211:24)
+    at ChromeDriver.getDriver (/home/mehdi/Delivery/ubisoft/TwoShips/node_modules/nightwatch/dist/transport/selenium-webdriver/index.js:180:39)
+    at async ChromeDriver.createSession (/home/mehdi/Delivery/ubisoft/TwoShips/node_modules/nightwatch/dist/transport/selenium-webdriver/index.js:233:27)
+    at async DefaultRunner.runTestSuite (/home/mehdi/Delivery/ubisoft/TwoShips/node_modules/nightwatch/dist/runner/test-runners/default.js:69:13)
+    at async DefaultRunner.promiseFn (/home/mehdi/Delivery/ubisoft/TwoShips/node_modules/nightwatch/dist/runner/test-runners/default.js:84:13)
+      ]]></error>  
+
+  
+    
+    <testcase
+      name="Can I start game" classname="twoshipstest.canimove">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Can shoot" classname="twoshipstest.canimove">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Can kill" classname="twoshipstest.canimove">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>

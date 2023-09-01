@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="2">
+
+  <testsuite name="twoshipstest.canishoot"
+    errors="0" failures="0" hostname="" id="" package="twoshipstest" skipped="0"
+    tests="2" time="16.29" timestamp="">
+  
+    <testcase name="Can I start game" classname="twoshipstest.canishoot" time="0.5920" assertions="1">
+
+    
+    </testcase>
+  
+    <testcase name="my body is ready !!" classname="twoshipstest.canishoot" time="7.551" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>
