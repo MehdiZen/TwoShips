@@ -40,7 +40,7 @@ module.exports = {
   test_settings: {
     default: {
       disable_error_log: false,
-      launch_url: 'http://localhost:5500',
+      launch_url: 'http://127.0.0.1:5500/TwoShips/index.html',
 
       screenshots: {
         enabled: false,
