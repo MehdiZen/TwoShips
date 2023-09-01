@@ -5,14 +5,14 @@
 
   <testsuite name="twoshipstest.canishoot"
     errors="0" failures="0" hostname="" id="" package="twoshipstest" skipped="0"
-    tests="2" time="16.29" timestamp="">
+    tests="2" time="23.68" timestamp="">
   
-    <testcase name="Can I start game" classname="twoshipstest.canishoot" time="0.5920" assertions="1">
+    <testcase name="Can I start game" classname="twoshipstest.canishoot" time="0.8390" assertions="1">
 
     
     </testcase>
   
-    <testcase name="my body is ready !!" classname="twoshipstest.canishoot" time="7.551" assertions="4">
+    <testcase name="my body is ready !!" classname="twoshipstest.canishoot" time="11.00" assertions="4">
 
     
 

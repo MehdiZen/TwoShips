@@ -1,9 +1,8 @@
 name: Nightwatch Tests
+
 on:
   push:
-    branches: [ main ]
   pull_request:
-    branches: [ main ]
 
 jobs:
   build:
@@ -15,17 +14,34 @@ jobs:
         node-version: [16.x, 18.x, 20.x]
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: sudo apt-get install xvfb
-    
-    - name: Run Nightwatch tests
-      run: xvfb-run --auto-servernum npm run nightwatch:headless -- --env chrome
+
+    - name: Install Dependencies
+      run: npm ci
+
+    - name: Install xvfb
+      run: sudo apt-get install xvfb
+
+    - name: Install live-server
+      run: npm install -g live-server 
+
+    - name: Start Live Server
+      run: live-server --port=5500 &
+
+    - name: Run Nightwatch
+      run: npm run nightwatch
+      
+    - name: Stop Live Server
+      run: pkill -f "live-server"
+    # - name: Run Nightwatch tests
+    #   run: xvfb-run --auto-servernum npm run nightwatch:headless -- --env chrome
 
     # - name: Run Nightwatch tests
     #   run: npx nightwatch ./nightwatch/examples/twoshipstest/*.js --headless

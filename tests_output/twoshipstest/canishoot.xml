@@ -3,9 +3,9 @@
             failures="0"
             tests="0">
 
-  <testsuite name="twoshipstest.canimove"
-    errors="1" failures="0" hostname="" id="" package="twoshipstest" skipped="3"
-    tests="0" time="0.002000" timestamp="">
+  <testsuite name="twoshipstest.canishoot"
+    errors="1" failures="0" hostname="" id="" package="twoshipstest" skipped="2"
+    tests="0" time="0.001000" timestamp="">
   
 
   
@@ -53,17 +53,12 @@
   
     
     <testcase
-      name="Can I start game" classname="twoshipstest.canimove">
+      name="Can I start game" classname="twoshipstest.canishoot">
       <skipped />
     </testcase>
     
     <testcase
-      name="Can shoot" classname="twoshipstest.canimove">
-      <skipped />
-    </testcase>
-    
-    <testcase
-      name="Can kill" classname="twoshipstest.canimove">
+      name="my body is ready !!" classname="twoshipstest.canishoot">
       <skipped />
     </testcase>
     

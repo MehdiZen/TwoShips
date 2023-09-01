@@ -1,49 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
-            failures="1"
+            failures="0"
             tests="3">
 
   <testsuite name="twoshipstest.canimove"
-    errors="0" failures="1" hostname="" id="" package="twoshipstest" skipped="0"
-    tests="3" time="24.88" timestamp="">
+    errors="0" failures="0" hostname="" id="" package="twoshipstest" skipped="0"
+    tests="3" time="14.80" timestamp="">
   
-    <testcase name="Can I start game" classname="twoshipstest.canimove" time="0.7430" assertions="1">
+    <testcase name="Can I start game" classname="twoshipstest.canimove" time="0.9680" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Can shoot" classname="twoshipstest.canimove" time="6.273" assertions="1">
+    <testcase name="Can shoot" classname="twoshipstest.canimove" time="6.347" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Can kill" classname="twoshipstest.canimove" time="5.423" assertions="14">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-      <failure message="Photos comparées in 5000ms - expected &#34;true&#34; but got: &#34;&#34; (5300ms)">    at NightwatchAPI.&lt;anonymous&gt; (/home/mehdi/Delivery/ubisoft/TwoShips/nightwatch/examples/twoshipstest/canimove.js:29:21)</failure>
+    <testcase name="Can kill" classname="twoshipstest.canimove" time="0.08500" assertions="1">
 
     
     </testcase>
