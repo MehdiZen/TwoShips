@@ -38,7 +38,7 @@ jobs:
     #   run: wait-on http://127.0.0.1:5500/TwoShips/index.html
 
     - name: Run Nightwatch tests 
-      run: xvfb-run --auto-servernum npm nightwatch -- --env chrome
+      run: xvfb-run --auto-servernum npm run nightwatch -- --env chrome
       
     # - name: Stop Local Server
     #   run: pkill -f "live-server"
