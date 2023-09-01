@@ -31,21 +31,15 @@ jobs:
 
     - name: Install live-server
       run: npm install -g live-server
-       
-    - name: Install Chromedriver
-      run: |
-        CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d '.' -f1)
-        CHROMEDRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION)
-        curl -o chromedriver_linux64.zip https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip
-        unzip chromedriver_linux64.zip
-        chmod +x chromedriver
-        mv chromedriver /usr/local/bin/
 
     - name: Start Live Server
-      run: live-server --port=5500 --watch="./index.html" &
+      run: live-server --port=5500 --watch="../../index.html" &
 
-    - name: Start Live Server with XVFB
-      run: xvfb-run --server-args="-screen 0 1024x768x24" live-server --port=5500 --watch="./index.html" &
+    - name: Wait for Local Server
+      run: wait-on http://127.0.0.1:5500
+
+    # - name: Start Live Server with XVFB
+    #   run: xvfb-run --server-args="-screen 0 1024x768x24" live-server --port=5500 --watch="./index.html" &
     
     - name: Run Nightwatch
       run: npm run nightwatch
