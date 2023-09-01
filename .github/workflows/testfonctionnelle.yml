@@ -25,7 +25,7 @@ jobs:
     - run: sudo apt-get install xvfb
     
     - name: Run Nightwatch tests
-      run: xvfb-run --auto-servernum npm run nightwatch -- --env chrome
+      run: xvfb-run --auto-servernum npm run nightwatch:headless -- --env chrome
 
     # - name: Run Nightwatch tests
     #   run: npx nightwatch ./nightwatch/examples/twoshipstest/*.js --headless
