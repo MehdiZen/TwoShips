@@ -37,7 +37,7 @@ jobs:
     # - name: Wait for Local Server
     #   run: wait-on http://127.0.0.1:5500/TwoShips/index.html
     - name: Debug - List Files in Directory
-      run: ls -R ../../
+      run: ls -R ./
 
     - name: Run Nightwatch tests 
       run: xvfb-run --auto-servernum npm run nightwatch -- --env chrome
