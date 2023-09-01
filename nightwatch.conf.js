@@ -43,7 +43,7 @@ module.exports = {
       launch_url: 'http://localhost:5500/TwoShips/index.html',
 
       screenshots: {
-        enabled: false,
+        enabled: true,
         path: './screens',
         on_failure: true
       },
