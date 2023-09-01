@@ -34,6 +34,9 @@ jobs:
 
     - name: Install wait-on
       run: npm install -g wait-on
+      
+    - name: Install Chrome and Chromedriver
+      uses: nanopx/chromedriver@v2
 
     - name: Start Live Server
       run: live-server --port=5500 --watch="../../index.html" &
