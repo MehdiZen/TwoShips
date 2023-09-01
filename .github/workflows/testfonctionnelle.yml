@@ -35,9 +35,12 @@ jobs:
     - name: Start Live Server
       run: live-server --port=5500 --watch="./index.html" &
 
+    - name: Start Live Server with XVFB
+      run: xvfb-run --server-args="-screen 0 1024x768x24" live-server --port=5500 --watch="./index.html" &
+    
     - name: Run Nightwatch
       run: npm run nightwatch
-      
+
     - name: Stop Live Server
       run: pkill -f "live-server"
     # - name: Run Nightwatch tests
