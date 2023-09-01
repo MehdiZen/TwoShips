@@ -26,19 +26,19 @@ jobs:
     - name: Install Dependencies
       run: npm ci
 
-    # - name: Install wait-on
-    #   run: npm install -g wait-on
+    - name: Install xvfb
+      run: sudo apt-get install xvfb 
 
-    - name: Start Local Server
-      run: |
-        npm install -g live-server
-        live-server --port=5500 --watch="../../index.html" &
-        sleep 10
+    # - name: Start Local Server
+    #   run: |
+    #     npm install -g live-server
+    #     live-server --port=5500 --watch="../../index.html" &
+    #     sleep 10
     # - name: Wait for Local Server
     #   run: wait-on http://127.0.0.1:5500/TwoShips/index.html
 
-    - name: Run Nightwatch
-      run: npm run nightwatch
+    - name: Run Nightwatch tests 
+      run: xvfb-run --auto-servernum npm nightwatch -- --env chrome
       
-    - name: Stop Local Server
-      run: pkill -f "live-server"
+    # - name: Stop Local Server
+    #   run: pkill -f "live-server"
