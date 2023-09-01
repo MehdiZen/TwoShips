@@ -32,6 +32,9 @@ jobs:
     - name: Install live-server
       run: npm install -g live-server
 
+    - name: Install wait-on
+      run: npm install -g wait-on
+
     - name: Start Live Server
       run: live-server --port=5500 --watch="../../index.html" &
 
