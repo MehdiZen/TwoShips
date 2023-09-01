@@ -33,7 +33,7 @@ jobs:
       run: npm install -g live-server 
 
     - name: Start Live Server
-      run: live-server --port=5500 &
+      run: live-server --port=5500 --watch="./index.html" &
 
     - name: Run Nightwatch
       run: npm run nightwatch
