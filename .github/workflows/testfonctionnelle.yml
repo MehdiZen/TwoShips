@@ -26,47 +26,19 @@ jobs:
     - name: Install Dependencies
       run: npm ci
 
-    - name: Install xvfb
-      run: sudo apt-get install xvfb
-
-    - name: Install live-server
-      run: npm install -g live-server
-
     - name: Install wait-on
       run: npm install -g wait-on
 
-    - name: Install Chrome
+    - name: Start Local Server
       run: |
-        wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-        sudo dpkg -i google-chrome-stable_current_amd64.deb
-        sudo apt-get -f install
-      if: runner.os == 'Linux'
-
-    - name: Install Chromedriver
-      run: |
-        LATEST=$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
-        wget https://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip
-        unzip chromedriver_linux64.zip
-        chmod +x chromedriver
-        sudo mv chromedriver /usr/local/bin/
-      if: runner.os == 'Linux'
-
-    - name: Start Live Server
-      run: live-server --port=5500 --watch="../../index.html" &
+        npm install -g live-server
+        live-server --port=5500 --watch="../../index.html" &
 
     - name: Wait for Local Server
-      run: wait-on http://127.0.0.1:5500
+      run: wait-on http://127.0.0.1:5500/TwoShips/index.html
 
-    # - name: Start Live Server with XVFB
-    #   run: xvfb-run --server-args="-screen 0 1024x768x24" live-server --port=5500 --watch="./index.html" &
-    
     - name: Run Nightwatch
       run: npm run nightwatch
-
-    - name: Stop Live Server
+      
+    - name: Stop Local Server
       run: pkill -f "live-server"
-    # - name: Run Nightwatch tests
-    #   run: xvfb-run --auto-servernum npm run nightwatch:headless -- --env chrome
-
-    # - name: Run Nightwatch tests
-    #   run: npx nightwatch ./nightwatch/examples/twoshipstest/*.js --headless
