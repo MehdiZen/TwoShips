@@ -69,17 +69,17 @@ module.exports = {
           w3c: true,
           args: [
             '--no-sandbox',
-            '--disable-dev-shm-usage'
+            '--disable-dev-shm-usage',
             //'--ignore-certificate-errors',
             //'--allow-insecure-localhost',
-            //'--headless'
+            '--headless'
           ]
         }
       },
 
       webdriver: {
         start_process: true,
-        server_path: '',
+        server_path: require('chromedriver').path,
         cli_args: [
           // --verbose
         ]

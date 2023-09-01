@@ -5,19 +5,19 @@
 
   <testsuite name="twoshipstest.canimove"
     errors="0" failures="0" hostname="" id="" package="twoshipstest" skipped="0"
-    tests="3" time="14.80" timestamp="">
+    tests="3" time="14.72" timestamp="">
   
-    <testcase name="Can I start game" classname="twoshipstest.canimove" time="0.9680" assertions="1">
+    <testcase name="Can I start game" classname="twoshipstest.canimove" time="0.9320" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Can shoot" classname="twoshipstest.canimove" time="6.347" assertions="1">
+    <testcase name="Can shoot" classname="twoshipstest.canimove" time="6.356" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Can kill" classname="twoshipstest.canimove" time="0.08500" assertions="1">
+    <testcase name="Can kill" classname="twoshipstest.canimove" time="0.06900" assertions="1">
 
     
     </testcase>
