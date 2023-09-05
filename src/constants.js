@@ -1,4 +1,4 @@
-import { vec3_create } from './vec3.js';
+import {vec3_create} from './vec3.js';
 
 export var DEBUG = false;
 

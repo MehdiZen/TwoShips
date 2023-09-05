@@ -20,14 +20,14 @@ export var entity_filter = (entity, predicate) =>
   entity.components.filter(predicate);
 
 export var entity_remove = (entity, component) => {
-  var index = entity.components.indexOf(component);
+  const index = entity.components.indexOf(component);
 
   if (index >= 0) {
     entity.components
-      .splice(index, 1)
-      .map(component => (component.parent = undefined));
+        .splice(index, 1)
+        .map((component) => (component.parent = undefined));
   }
 };
 
 export var entity_update = (entity, ...args) =>
-  entity.components.map(component => component.update(...args));
+  entity.components.map((component) => component.update(...args));

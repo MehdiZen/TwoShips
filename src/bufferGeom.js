@@ -1,17 +1,17 @@
-import { bufferAttr_copyVector3sArray } from './bufferAttr.js';
+import {bufferAttr_copyVector3sArray} from './bufferAttr.js';
 
-export var bufferGeom_fromGeom = geom => {
-  var vertices = [];
-  var colors = [];
+export var bufferGeom_fromGeom = (geom) => {
+  const vertices = [];
+  const colors = [];
 
-  geom.faces.map(face => {
+  geom.faces.map((face) => {
     vertices.push(
-      geom.vertices[face.a],
-      geom.vertices[face.b],
-      geom.vertices[face.c],
+        geom.vertices[face.a],
+        geom.vertices[face.b],
+        geom.vertices[face.c],
     );
 
-    var { color, vertexColors } = face;
+    const {color, vertexColors} = face;
     if (vertexColors.length === 3) {
       colors.push(...vertexColors);
     } else {
@@ -21,12 +21,12 @@ export var bufferGeom_fromGeom = geom => {
 
   return {
     position: bufferAttr_copyVector3sArray(
-      new Float32Array(vertices.length * 3),
-      vertices,
+        new Float32Array(vertices.length * 3),
+        vertices,
     ),
     color: bufferAttr_copyVector3sArray(
-      new Float32Array(colors.length * 3),
-      colors,
+        new Float32Array(colors.length * 3),
+        colors,
     ),
   };
 };

@@ -11,10 +11,10 @@ describe('angularjs homepage todo list', function() {
   it('should add a todo using custom commands', async function(browser) {
     // adding a new task to the list
     const elements = await browser
-      .navigateTo('https://angularjs.org')
-      .sendKeys('[ng-model="todoList.todoText"]', 'what is nightwatch?')
-      .click('[value="add"]')
-      .angular.getElementsInList('todoList.todos'); // use of custom-command
+        .navigateTo('https://angularjs.org')
+        .sendKeys('[ng-model="todoList.todoText"]', 'what is nightwatch?')
+        .click('[value="add"]')
+        .angular.getElementsInList('todoList.todos'); // use of custom-command
 
     const taskEl = element(elements[2]);
 

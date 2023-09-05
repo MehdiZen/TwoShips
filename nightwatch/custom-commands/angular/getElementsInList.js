@@ -3,7 +3,7 @@
  *
  * Usage:
  *   browser.angular.getElementsInList(listName)
- * 
+ *
  * See the example test using this object:
  *   specs/with-custom-commands/angularTodo.js
  *
@@ -15,15 +15,18 @@
  */
 
 module.exports = class AngularCommand {
-
-  async command(listName, cb = function(r) {return r}) {
+  async command(listName, cb = function(r) {
+    return r;
+  }) {
     // Script to be executed in the browser
     const script = function(listName) {
       // executed in the browser context
       // eslint-disable-next-line
       var elements = document.querySelectorAll('*[ng-repeat$="'+listName+'"]');
 
-      if (elements) {return elements}
+      if (elements) {
+        return elements;
+      }
 
       return null;
     };

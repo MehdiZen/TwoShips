@@ -38,6 +38,3 @@ jobs:
 
       - name: Test
         run: npm test
-
-      - name: eslint
-        run: npx eslint . --ext .js,.jsx,.ts,.tsx

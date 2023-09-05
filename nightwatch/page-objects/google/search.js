@@ -3,7 +3,7 @@
  *
  * Usage:
  *   browser.page.google.search()
- * 
+ *
  * See the example test using this object:
  *   specs/with-page-objects/google.js
  *
@@ -15,28 +15,28 @@
 const searchCommands = {
   submit() {
     this.waitForElementVisible('@submitButton', 1000)
-      .click('@submitButton');
-    
+        .click('@submitButton');
+
     this.pause(1000);
 
     return this; // for command-chaining
-  }
+  },
 };
 
 module.exports = {
   url: 'https://google.no',
 
   commands: [
-    searchCommands
+    searchCommands,
   ],
 
   elements: {
     searchBar: {
-      selector: 'input[name=q]'
+      selector: 'input[name=q]',
     },
 
     submitButton: {
-      selector: 'input[value="Google Search"]'
-    }
-  }
+      selector: 'input[value="Google Search"]',
+    },
+  },
 };
