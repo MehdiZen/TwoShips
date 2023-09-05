@@ -38,7 +38,10 @@ jobs:
     #   run: wait-on http://127.0.0.1:5500/TwoShips/index.html
     # - name: Debug 
     #   run: ls ./
-
+  Nightwatchtest:
+    name: NWTest
+    runs-on: ubuntu-latest
+    steps:
     - name: Run Nightwatch tests 
       run: xvfb-run --auto-servernum npm run nightwatch -- --env chrome
       
