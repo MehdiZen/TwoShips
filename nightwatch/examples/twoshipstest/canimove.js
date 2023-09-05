@@ -1,7 +1,7 @@
 describe('test souris', function() {
     // before(browser => browser.navigateTo('http://127.0.0.1:5500/TwoShips/index.html'));
     it('Can I start game', function(client) {
-        client.url("http://localhost:5500/index.html")
+        client.url("http://127.0.0.1:5500/TwoShips/index.html")
       client
         .click('.r')
         .waitForElementVisible('#canvas', 5000)
