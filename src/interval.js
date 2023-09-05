@@ -1,6 +1,6 @@
-export var interval_create = duration => {
-  var previousTime = 0;
-  var time = duration;
+export var interval_create = (duration) => {
+  let previousTime = 0;
+  let time = duration;
 
   return (dt, condition = true) => {
     time += dt;

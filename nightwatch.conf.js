@@ -14,7 +14,7 @@
 module.exports = {
   // An array of folders (excluding subfolders) where your tests are located;
   // if this is not specified, the test source must be passed as the second argument to the test runner.
-  src_folders: ['test','nightwatch/examples'],
+  src_folders: ['test', 'nightwatch/examples'],
 
   // See https://nightwatchjs.org/guide/concepts/page-object-model.html
   page_objects_path: ['nightwatch/page-objects'],
@@ -27,14 +27,14 @@ module.exports = {
 
   // See https://nightwatchjs.org/guide/extending-nightwatch/adding-plugins.html
   plugins: ['@nightwatch/vrt'],
-  
+
   // See https://nightwatchjs.org/guide/concepts/test-globals.html
   globals_path: '',
-  
+
   webdriver: {},
 
   test_workers: {
-    enabled: true
+    enabled: true,
   },
 
   test_settings: {
@@ -45,23 +45,23 @@ module.exports = {
       screenshots: {
         enabled: true,
         path: './screens',
-        on_failure: true
+        on_failure: true,
       },
 
       desiredCapabilities: {
-        browserName: 'chrome'
+        browserName: 'chrome',
       },
-      
+
       webdriver: {
         start_process: true,
-        server_path: ''
+        server_path: '',
       },
-      
+
     },
-    
+
     chrome: {
       desiredCapabilities: {
-        browserName: 'chrome',
+        'browserName': 'chrome',
         'goog:chromeOptions': {
           // More info on Chromedriver: https://sites.google.com/a/chromium.org/chromedriver/
           //
@@ -70,11 +70,11 @@ module.exports = {
           args: [
             // '--no-sandbox',
             // '--disable-dev-shm-usage',
-            //'--ignore-certificate-errors',
-            //'--allow-insecure-localhost',
-            '--headless'
-          ]
-        }
+            // '--ignore-certificate-errors',
+            // '--allow-insecure-localhost',
+            '--headless',
+          ],
+        },
       },
 
       webdriver: {
@@ -82,10 +82,10 @@ module.exports = {
         server_path: require('chromedriver').path,
         cli_args: [
           // --verbose
-        ]
-      }
+        ],
+      },
     },
-    
+
   },
-  
+
 };

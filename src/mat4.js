@@ -6,11 +6,11 @@ import {
   vec3_subVectors,
 } from './vec3.js';
 
-var _zero = vec3_create();
-var _one = vec3_create(1, 1, 1);
-var _x = vec3_create();
-var _y = vec3_create();
-var _z = vec3_create();
+const _zero = vec3_create();
+const _one = vec3_create(1, 1, 1);
+const _x = vec3_create();
+const _y = vec3_create();
+const _z = vec3_create();
 
 export var mat4_create = () =>
   // prettier-ignore
@@ -64,7 +64,7 @@ export var mat4_lookAt = (m, eye, target, up) => {
 };
 
 export var mat4_multiplyMatrices = (m, a, b) => {
-  var [
+  const [
     a11,
     a21,
     a31,
@@ -86,7 +86,7 @@ export var mat4_multiplyMatrices = (m, a, b) => {
     a44,
   ] = a;
 
-  var [
+  const [
     b11,
     b21,
     b31,
@@ -141,9 +141,9 @@ export var mat4_setPosition = (m, v) => {
   return m;
 };
 
-export var mat4_invert = m => {
+export var mat4_invert = (m) => {
   // based on http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/fourD/index.htm
-  var [
+  const [
     n11,
     n21,
     n31,
@@ -165,28 +165,28 @@ export var mat4_invert = m => {
     n44,
   ] = m;
 
-  var t11 =
+  const t11 =
     n23 * n34 * n42 -
     n24 * n33 * n42 +
     n24 * n32 * n43 -
     n22 * n34 * n43 -
     n23 * n32 * n44 +
     n22 * n33 * n44;
-  var t12 =
+  const t12 =
     n14 * n33 * n42 -
     n13 * n34 * n42 -
     n14 * n32 * n43 +
     n12 * n34 * n43 +
     n13 * n32 * n44 -
     n12 * n33 * n44;
-  var t13 =
+  const t13 =
     n13 * n24 * n42 -
     n14 * n23 * n42 +
     n14 * n22 * n43 -
     n12 * n24 * n43 -
     n13 * n22 * n44 +
     n12 * n23 * n44;
-  var t14 =
+  const t14 =
     n14 * n23 * n32 -
     n13 * n24 * n32 -
     n14 * n22 * n33 +
@@ -194,11 +194,11 @@ export var mat4_invert = m => {
     n13 * n22 * n34 -
     n12 * n23 * n34;
 
-  var det = n11 * t11 + n21 * t12 + n31 * t13 + n41 * t14;
+  const det = n11 * t11 + n21 * t12 + n31 * t13 + n41 * t14;
 
   if (det === 0) return m.fill(0);
 
-  var detInv = 1 / det;
+  const detInv = 1 / det;
 
   m.set([
     t11 * detInv,
@@ -310,7 +310,7 @@ export var mat4_invert = m => {
 };
 
 export var mat4_scale = (m, v) => {
-  var { x, y, z } = v;
+  const {x, y, z} = v;
 
   m[0] *= x;
   m[4] *= y;
@@ -332,23 +332,23 @@ export var mat4_scale = (m, v) => {
 };
 
 export var mat4_compose = (m, position, quaternion, scale) => {
-  var { x, y, z, w } = quaternion;
-  var x2 = x + x,
-    y2 = y + y,
-    z2 = z + z;
-  var xx = x * x2,
-    xy = x * y2,
-    xz = x * z2;
-  var yy = y * y2,
-    yz = y * z2,
-    zz = z * z2;
-  var wx = w * x2,
-    wy = w * y2,
-    wz = w * z2;
+  const {x, y, z, w} = quaternion;
+  const x2 = x + x;
+  const y2 = y + y;
+  const z2 = z + z;
+  const xx = x * x2;
+  const xy = x * y2;
+  const xz = x * z2;
+  const yy = y * y2;
+  const yz = y * z2;
+  const zz = z * z2;
+  const wx = w * x2;
+  const wy = w * y2;
+  const wz = w * z2;
 
-  var sx = scale.x,
-    sy = scale.y,
-    sz = scale.z;
+  const sx = scale.x;
+  const sy = scale.y;
+  const sz = scale.z;
 
   m.set([
     (1 - (yy + zz)) * sx,

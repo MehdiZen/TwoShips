@@ -1,8 +1,8 @@
 export var createShaderProgram = (gl, vs, fs) => {
-  var program = gl.createProgram();
+  const program = gl.createProgram();
 
-  var createShader = (type, source) => {
-    var shader = gl.createShader(type);
+  const createShader = (type, source) => {
+    const shader = gl.createShader(type);
     gl.shaderSource(shader, source);
     gl.compileShader(shader);
     gl.attachShader(program, shader);
@@ -17,7 +17,7 @@ export var createShaderProgram = (gl, vs, fs) => {
 };
 
 export var createFloat32Buffer = (gl, array) => {
-  var buffer = gl.createBuffer();
+  const buffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
   gl.bufferData(gl.ARRAY_BUFFER, array, gl.STATIC_DRAW);
   return buffer;
@@ -36,13 +36,13 @@ export var setVec3Uniform = (gl, location, vector) =>
   gl.uniform3f(location, vector.x, vector.y, vector.z);
 
 export var getAttributeLocations = (gl, program) => {
-  var locations = {};
+  const locations = {};
 
-  var count = gl.getProgramParameter(program, gl.ACTIVE_ATTRIBUTES);
+  const count = gl.getProgramParameter(program, gl.ACTIVE_ATTRIBUTES);
 
-  for (var i = 0; i < count; i++) {
-    var attribute = gl.getActiveAttrib(program, i);
-    var { name } = attribute;
+  for (let i = 0; i < count; i++) {
+    const attribute = gl.getActiveAttrib(program, i);
+    const {name} = attribute;
     locations[name] = gl.getAttribLocation(program, name);
   }
 
@@ -50,13 +50,13 @@ export var getAttributeLocations = (gl, program) => {
 };
 
 export var getUniformLocations = (gl, program) => {
-  var locations = {};
+  const locations = {};
 
-  var count = gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS);
+  const count = gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS);
 
-  for (var i = 0; i < count; i++) {
-    var uniform = gl.getActiveUniform(program, i);
-    var { name } = uniform;
+  for (let i = 0; i < count; i++) {
+    const uniform = gl.getActiveUniform(program, i);
+    const {name} = uniform;
     locations[name] = gl.getUniformLocation(program, name);
   }
 

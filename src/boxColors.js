@@ -1,6 +1,6 @@
-import { setVector } from './boxTransforms.js';
-import { rearg } from './utils.js';
-import { vec3_create } from './vec3.js';
+import {setVector} from './boxTransforms.js';
+import {rearg} from './utils.js';
+import {vec3_create} from './vec3.js';
 
 export var setFaceVertexColor = (face, index, color) => {
   if (face.a === index) {
@@ -18,10 +18,10 @@ export var setFaceVertexColor = (face, index, color) => {
 
 export var applyBoxVertexColors = (geom, ...colors) => {
   colors.map(([indices, value]) => {
-    var color = vec3_create();
+    const color = vec3_create();
     setVector(color, value);
-    geom.faces.map(face =>
-      indices.map(index => setFaceVertexColor(face, index, color)),
+    geom.faces.map((face) =>
+      indices.map((index) => setFaceVertexColor(face, index, color)),
     );
   });
 
@@ -32,7 +32,7 @@ export var colors = rearg(applyBoxVertexColors);
 
 export var applyBoxFaceColors = (geom, ...colors) => {
   colors.map(([indices, value]) =>
-    indices.map(index => setVector(geom.faces[index].color, value)),
+    indices.map((index) => setVector(geom.faces[index].color, value)),
   );
 
   return geom;
