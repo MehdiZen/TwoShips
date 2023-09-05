@@ -36,6 +36,10 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
+  Test:
+    needs: build
+    name: Tester
+    runs-on: ubuntu-latest
+    steps:
       - name: Test
         run: npm test
