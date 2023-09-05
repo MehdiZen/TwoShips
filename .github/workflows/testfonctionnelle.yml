@@ -39,11 +39,6 @@ jobs:
     # - name: Debug 
     #   run: ls ./
 
-  Nightwatchtest:
-    needs: build
-    name: NWTest
-    runs-on: ubuntu-latest
-    steps:
     - name: Run Nightwatch tests 
       run: xvfb-run --auto-servernum npm run nightwatch -- --env chrome
       
