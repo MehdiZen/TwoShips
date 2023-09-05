@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "test": "jest"
+    "test": "jest",
+    "nightwatch:headless": "nightwatch ./nightwatch/examples/twoshipstest/*.js --headless",
+    "nightwatch": "nightwatch ./nightwatch/examples/twoshipstest/*.js"
   },
   "repository": {
     "type": "git",
@@ -62,5 +64,8 @@
   },
   "directories": {
     "test": "tests"
+  },
+  "dependencies": {
+    "chromedriver": "^116.0.0"
   }
 }

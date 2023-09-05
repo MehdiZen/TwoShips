@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="0">
+
+  <testsuite name="twoshipstest.canishoot"
+    errors="1" failures="0" hostname="" id="" package="twoshipstest" skipped="2"
+    tests="0" time="0.001000" timestamp="">
+  
+
+  
+    <system-err>
+       An error occurred while creating a new ChromeDriver session: [WebDriverError] unknown error: cannot find dict &#39;desiredCapabilities&#39;
+  (Driver info: chromedriver=2.21.371461 (633e689b520b25f3e264a2ede6b74ccc23cb636a),platform=Linux 6.2.0-31-generic x86_64)
+  Verify if ChromeDriver is configured correctly; using:
+  {
+     start_process: true,
+     server_path: &#39;/home/mehdi/Delivery/ubisoft/TwoShips/node_modules/chromedriver/lib/chromedriver/chromedriver&#39;,
+     port: undefined,
+     host: &#39;localhost&#39;,
+     ssl: false,
+     default_path_prefix: &#39;&#39;,
+     proxy: undefined,
+     cli_args: {}
+  }
+
+ 
+  Set webdriver.log_path in your Nightwatch config to retrieve more logs from ChromeDriver.
+ An error occurred while creating a new ChromeDriver session: [WebDriverError] unknown error: cannot find dict &#39;desiredCapabilities&#39;
+  (Driver info: chromedriver=2.21.371461 (633e689b520b25f3e264a2ede6b74ccc23cb636a),platform=Linux 6.2.0-31-generic x86_64)
+  Verify if ChromeDriver is configured correctly; using:
+  {
+     start_process: true,
+     server_path: &#39;/home/mehdi/Delivery/ubisoft/TwoShips/node_modules/chromedriver/lib/chromedriver/chromedriver&#39;,
+     port: undefined,
+     host: &#39;localhost&#39;,
+     ssl: false,
+     default_path_prefix: &#39;&#39;,
+     proxy: undefined,
+     cli_args: {}
+  }
+
+ 
+  Set webdriver.log_path in your Nightwatch config to retrieve more logs from ChromeDriver.
+    </system-err>
+  
+
+    
+    <error message=""><![CDATA[
+      
+      ]]></error>  
+
+  
+    
+    <testcase
+      name="Can I start game" classname="twoshipstest.canishoot">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="my body is ready !!" classname="twoshipstest.canishoot">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>
