@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="1"
+            tests="1">
+
+  <testsuite name="twoshipstest.canimove"
+    errors="1" failures="1" hostname="" id="" package="twoshipstest" skipped="2"
+    tests="1" time="21.76" timestamp="">
+  
+    <testcase name="Can I start game" classname="twoshipstest.canimove" time="10.88" assertions="1">  <failure message="Timed out while waiting for element &lt;#canvas&gt; to be present for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (5197ms)">    at DescribeInstance.&lt;anonymous&gt; (/home/mehdi/Delivery/ubisoft/TwoShips/nightwatch/examples/twoshipstest/canimove.js:7:10)</failure>
+<system-out>[[ATTACHMENT|/home/mehdi/Delivery/ubisoft/TwoShips/screens/twoshipstest/canimove/Can-I-start-game_FAILED_Sep-05-2023-113930-GMT+0200.png]]</system-out>
+    
+    <error message="Timed out while waiting for element &lt;#canvas&gt; to be present for 5000 milliseconds. - expected [32m&#34;visible&#34;[39m but got: [31m&#34;not found&#34;[39m [90m(5197ms)[39m" type="error"><![CDATA[
+    Error
+    at DescribeInstance.&lt;anonymous&gt; (/home/mehdi/Delivery/ubisoft/TwoShips/nightwatch/examples/twoshipstest/canimove.js:7:10)
+    at Context.call (/home/mehdi/Delivery/ubisoft/TwoShips/node_modules/nightwatch/dist/testsuite/context.js:413:39)
+    at TestCase.run (/home/mehdi/Delivery/ubisoft/TwoShips/node_modules/nightwatch/dist/testsuite/testcase.js:50:39)
+    at Runnable.__runFn (/home/mehdi/Delivery/ubisoft/TwoShips/node_modules/nightwatch/dist/testsuite/index.js:647:84)
+    at Runnable.run (/home/mehdi/Delivery/ubisoft/TwoShips/node_modules/nightwatch/dist/testsuite/runnable.js:103:27)
+    at TestSuite.executeRunnable (/home/mehdi/Delivery/ubisoft/TwoShips/node_modules/nightwatch/dist/testsuite/index.js:776:55)
+    at TestSuite.handleRunnable (/home/mehdi/Delivery/ubisoft/TwoShips/node_modules/nightwatch/dist/testsuite/index.js:789:39)
+    at /home/mehdi/Delivery/ubisoft/TwoShips/node_modules/nightwatch/dist/testsuite/index.js:647:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async DefaultRunner.runTestSuite (/home/mehdi/Delivery/ubisoft/TwoShips/node_modules/nightwatch/dist/runner/test-runners/default.js:69:13)
+    ]]></error>
+    
+    </testcase>
+  
+
+  
+    <system-err>
+       NoSuchElementError
+   An element could not be located on the page using the given search parameters.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+
+    Error location:
+    /home/mehdi/Delivery/ubisoft/TwoShips/nightwatch/examples/twoshipstest/canimove.js:
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     4 |         client.url(&#34;http://localhost:5500/twoships/index.html&#34;)
+     5 |       client
+     6 |         .click(&#39;.r&#39;) 
+     7 |         .waitForElementVisible(&#39;#canvas&#39;, 5000)
+     8 | 
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+ NoSuchElementError
+   An element could not be located on the page using the given search parameters.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+
+    Error location:
+    /home/mehdi/Delivery/ubisoft/TwoShips/nightwatch/examples/twoshipstest/canishoot.js:
+    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     3 |         client.url(&#34;http://localhost:5500/twoships/index.html&#34;)
+     4 |      client
+     5 |         .click(&#39;.r&#39;) 
+     6 |         .waitForElementVisible(&#39;#canvas&#39;, 5000)
+     7 |       console.log(&#34;game Started&#34;);
+    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+    </system-err>
+  
+
+    
+
+  
+    
+    <testcase
+      name="Can shoot" classname="twoshipstest.canimove">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Can kill" classname="twoshipstest.canimove">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>
